@@ -1,4 +1,4 @@
-package com.platzi.market.persistencia.entidad;
+package com.platzi.market.persistence.entity;
 
 import javax.persistence.Column;
 import javax.persistence.Embeddable;
