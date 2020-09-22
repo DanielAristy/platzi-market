@@ -3,7 +3,6 @@ package com.platzi.market.domain;
 public class Category {
 
     private int categoryId;
-    /*Nombre de categoria*/
     private String category;
     private boolean active;
 

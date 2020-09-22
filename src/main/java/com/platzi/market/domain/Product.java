@@ -1,6 +1,6 @@
 package com.platzi.market.domain;
 
-public class Product {
+public class  Product {
 
     private int productId;
     private String name;
@@ -9,14 +9,6 @@ public class Product {
     private int stock;
     private boolean active;
     private Category category;
-
-    public Category getCategory() {
-        return category;
-    }
-
-    public void setCategory(Category category) {
-        this.category = category;
-    }
 
     public int getProductId() {
         return productId;
@@ -64,5 +56,13 @@ public class Product {
 
     public void setActive(boolean active) {
         this.active = active;
+    }
+
+    public Category getCategory() {
+        return category;
+    }
+
+    public void setCategory(Category category) {
+        this.category = category;
     }
 }
