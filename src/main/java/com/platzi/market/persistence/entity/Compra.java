@@ -33,11 +33,11 @@ public class Compra {
     @OneToMany(mappedBy = "producto")
     private List<ComprasProducto> productos;
 
-    public String getIdCompra() {
+    public Integer getIdCompra() {
         return idCompra;
     }
 
-    public void setIdCompra(String idCompra) {
+    public void setIdCompra(Integer idCompra) {
         this.idCompra = idCompra;
     }
 
