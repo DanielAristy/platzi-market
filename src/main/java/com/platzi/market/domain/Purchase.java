@@ -12,6 +12,7 @@ public class Purchase {
     private String comment;
     private String state;
     private List<PurchaseItem> items;
+    
 
     public Integer getPurchaseId() {
         return purchaseId;
