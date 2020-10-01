@@ -1,7 +1,7 @@
 package com.platzi.market.persistence;
 
 import com.platzi.market.domain.Purchase;
-import com.platzi.market.domain.repository.ParchaseRepository;
+import com.platzi.market.domain.repository.PurchaseRepository;
 import com.platzi.market.persistence.crud.CompraCrudRepository;
 import com.platzi.market.persistence.entity.Compra;
 import com.platzi.market.persistence.mapper.PurchaseMapper;
@@ -12,7 +12,7 @@ import java.util.List;
 import java.util.Optional;
 
 @Repository
-public class ComprasRepository implements ParchaseRepository {
+public class CompraRepository implements PurchaseRepository {
 
     @Autowired
     private CompraCrudRepository compraCrudRepository;
@@ -23,12 +23,13 @@ public class ComprasRepository implements ParchaseRepository {
 
     @Override
     public List<Purchase> getAll() {
-        return mapper.toParcheses((List<Compra>) compraCrudRepository.findAll());
+        return mapper.toPurchases((List<Compra>) compraCrudRepository.findAll());
     }
 
     @Override
     public Optional<List<Purchase>> getByClient(String clientId) {
-        return compraCrudRepository.findByIdCliente(clientId).map(compras -> mapper.toParcheses(compras));
+        return compraCrudRepository.findByIdCliente(clientId)
+                .map(compras -> mapper.toPurchases(compras));
     }
 
     @Override
